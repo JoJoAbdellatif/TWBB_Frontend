@@ -1,6 +1,6 @@
 import ProductList from './component/Product/ProductList';
 import useFetch from './useFetch';
-const ProductsUrl = 'http://localhost:5000/api/product?page=2'
+const ProductsUrl = 'https://twbb-inventory.vercel.app/api/product?page=2'
 
 
 const Home = () => {

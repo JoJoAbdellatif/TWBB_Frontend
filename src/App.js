@@ -10,16 +10,16 @@ const axios = require('axios');
 const UrlGuestCart = "http://localhost:8000/api/carts/createCart"
 
 function App() {
-  if(!localStorage.get('Cart')){
-    axios.get(UrlGuestCart)
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
-    localStorage.set()
-  }
+  // if(!localStorage.get('Cart')){
+  //   axios.get(UrlGuestCart)
+  //   .then(function (response) {
+  //     console.log(response.data);
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   })
+  //   localStorage.set()
+  // }
   return (
     <Router>
       <div className="App">
