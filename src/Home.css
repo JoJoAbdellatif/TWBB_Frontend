@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+    margin: 0;
+    font-family: "Poppins";
+    color: #dcfd51;
+    background-color: #F5F5F5;
+    font-weight: 700;
+    font-size: 16pt;
+}
+
+.navbar {
+    padding : 20px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-height: 40px;
+    background-color:#124831;
+}
+
+.navbar h1 {
+    font-size: 30pt;
+    font-weight: 70;
+    background-color:#124831;
+
+}
+
+.navbar .links {
+    margin-left: auto;
+    background-color:#124831;
+
+}
+
+.navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 40;
+font-size: 24px;
+line-height: 24px;
+    padding: 6px;
+    width: 174px;
+height: 24px;
+background-color:#124831;
+
+
+}
+
+
+.navbar a:hover {
+    background-color: #dcfd51; 
+    color: #124831;
+    border-radius: 5px;
+}
+.navbar.logo{
+background-color:#124831 ;
+
+
+}
+.home{
+    padding-left: 100px;
+    margin: 20px;
+}
+
+.product-preview {
+/*    
+box-sizing: border-box; */
+
+width: 250px;
+height: 388px;
+margin-top: 10px;
+margin-right: 10px;
+
+float:left;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+/* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+.price{
+    position: absolute;
+width: 121px;
+height: 18px;
+margin-left:16px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+background: #FFFFFF;
+
+
+/* or 120% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #115341;
+}
+.prodImage{
+   
+
+position: center;
+margin:20px;
+width: 216px;
+height: 233px;
+
+
+}
+.prodName{
+    position: absolute;
+width: 231px;
+height: 57px;
+margin-left:16px;
+margin-top:17px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+background: #FFFFFF;
+
+
+/* or 150% */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.prodWeight{
+    position: absolute;
+width: 44px;
+height: 23px;
+
+font-family: 'Poppins';
+font-style: italic;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+margin-top:65px;
+margin-left:16px;
+/* or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #818A91;
+}
+.buttonBox{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background: #DCFD51;
+margin-left:180px;
+max-width: 100%;
+max-height: 100%;
+
+}
+.buttonAdd{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+    background: #DCFD51;
+    margin-left:-3px;
+}
+.add{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background: #DCFD51; 
+}
