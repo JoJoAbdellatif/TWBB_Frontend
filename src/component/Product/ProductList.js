@@ -14,9 +14,10 @@ const ProductList = (props) => {
                         <h1 className='price'>{product.productReference[0].productPrice}.00 EGP</h1>
                         <h2 className='prodName'>{product.productName}</h2>
                         <h3 className='prodWeight'>{product.productWeight}</h3>
-                        <div className='buttonBox' href="/addproduct"><button className='buttonAdd'><img className='add' href src={addToCart} /></button></div>
-
+                        
                     </Link>
+                    <div className='buttonBox' href="/addproduct"><button className='buttonAdd'></button></div>
+
                 </div>
             ))}
         </div>
