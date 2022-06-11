@@ -4,7 +4,7 @@ import { useState,useRef } from "react"
 const axios = require('axios')
 
 
-const ProductsUrl = 'http://localhost:5000/api/product?page='
+const ProductsUrl = 'https://twbb-inventory.vercel.app/api/product?page='
 
 
 const Home = () => {

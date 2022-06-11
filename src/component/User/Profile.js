@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import MapView from './MapView'
 import {Link} from "react-router-dom";
 const axios = require('axios')
-const deleteURL = 'http://localhost:8000/api/users/'
+const deleteURL = 'https://twbb-users.vercel.app/users/'
 
 const Profile = () => {
     const [fName, setFName] = useState('');
@@ -40,10 +40,10 @@ const Profile = () => {
        
         if(flag){
             
-            return window.location.assign('http://localhost:3000/login')
+            return window.location.assign('https://twbb-frontend.vercel.app/login')
         }else{
             
-            return window.location.assign('http://localhost:3000/register')
+            return window.location.assign('https://twbb-frontend.vercel.app/register')
         }
     }
     function wouldYouLike(id){
@@ -62,7 +62,7 @@ const Profile = () => {
             
         }else{
                  
-            axios.get("http://localhost:8000/api/users/profile/"+localStorage.getItem('User'))
+            axios.get("https://twbb-users.vercel.app/api/users/profile/"+localStorage.getItem('User'))
             .then(function (response){
                 console.log(response);
                 

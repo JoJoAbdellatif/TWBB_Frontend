@@ -1,7 +1,7 @@
 import { useState } from "react"
 const axios = require('axios')
 
-const LoginURL = 'http://localhost:8000/api/users/login'
+const LoginURL = 'https://twbb-users.vercel.app/api/users/login'
 
 const Login = () => {
     const [email, setEmail] = useState('');

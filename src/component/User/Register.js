@@ -6,7 +6,7 @@ import Map from './Map'
 
 const axios = require('axios')
 
-const RegisterURL = 'http://localhost:8000/api/users/register'
+const RegisterURL = 'https://twbb-users.vercel.app/api/users/register'
 
 const Register = () => {
     const [fName, setFName] = useState('');

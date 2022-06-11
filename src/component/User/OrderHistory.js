@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useEffect, useRef } from "react"
 import OrderHistoryList from "./OrderHistoryList";
 const axios = require('axios')
-const viewOrderHistoryURL = 'http://localhost:2000/api/orders/getOrderHistory?Email='
+const viewOrderHistoryURL = 'https://twbb-orders.vercel.app/api/orders/getOrderHistory?Email='
 
 
 const OrderHistory = () => {

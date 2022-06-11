@@ -2,10 +2,10 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../useFetch";
 import addToCart from '../../images/add_FILL0_wght400_GRAD0_opsz48.png'
 import axios from 'axios';
-const addProductURL = 'http://localhost:8000/api/carts/addProduct?cartID='
-const UrlGuestCart = "http://localhost:8000/api/carts/createCart"
+const addProductURL = 'https://twbb-users.vercel.app/api/carts/addProduct?cartID='
+const UrlGuestCart = "https://twbb-users.vercel.app/api/carts/createCart"
 
-const ProductURL = 'http://localhost:5000/api/product/details&price/'
+const ProductURL = 'https://twbb-inventory.vercel.app/api/product/details&price/'
 function addProduct(id,e) {
     if(localStorage.getItem('Cart') === "null"){
         axios.post(UrlGuestCart)

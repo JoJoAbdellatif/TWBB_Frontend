@@ -1,7 +1,7 @@
 import useFetch from "../../useFetch";
 import { Link } from 'react-router-dom';
 import CartList from "./CartList";
-const CartURL = 'http://localhost:8000/api/carts/';
+const CartURL = 'https://twbb-users.vercel.app/api/carts/';
 const Cart = () => {
 
 

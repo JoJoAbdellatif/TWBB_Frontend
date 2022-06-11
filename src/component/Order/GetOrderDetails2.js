@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-const userProfile = 'http://localhost:8000/api/users/profile/'
-const CreateOrderURl = 'http://localhost:2000/api/orders/createOrder?cartID='
+const userProfile = 'https://twbb-users.vercel.app/api/users/profile/'
+const CreateOrderURl = 'https://twbb-orders.vercel.app/api/orders/createOrder?cartID='
 
 
 const GetOrderDetails2 = () => {
     
     function wouldYouLike(e,flag){
         if(!flag){
-            return window.location.assign('http://localhost:3000/orderInfo1')
+            return window.location.assign('https://twbb-frontend.vercel.app/orderInfo1')
         }
         else{
             axios.get(userProfile+localStorage.getItem('User'))

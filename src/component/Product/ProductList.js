@@ -1,8 +1,8 @@
 import addToCart from '../../images/add_FILL0_wght400_GRAD0_opsz48.png'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-const addProductURL = 'http://localhost:8000/api/carts/addProduct?cartID='
-const UrlGuestCart = "http://localhost:8000/api/carts/createCart"
+const addProductURL = 'https://twbb-users.vercel.app/api/carts/addProduct?cartID='
+const UrlGuestCart = "https://twbb-users.vercel.app/api/carts/createCart"
 
 const ProductList = (props) => {
     const products = props.products

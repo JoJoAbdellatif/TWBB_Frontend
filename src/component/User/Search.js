@@ -11,7 +11,7 @@ const Search = () => {
     };
     function SearchOutput(e,id){
        
-        axios.get(`http://localhost:5000/api/product/search?page=0&searchInput=${id}`).then(function (response) {
+        axios.get(`https://twbb-inventory.vercel.app/api/product/search?page=0&searchInput=${id}`).then(function (response) {
             setData(response.data)
             console.log(data);
         })

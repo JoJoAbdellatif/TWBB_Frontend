@@ -2,7 +2,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../../node_modules/bootstrap/'
 import { useState } from "react"
 const axios = require('axios')
-const updateProfileURL = 'http://localhost:8000/api/users/update/'
+const updateProfileURL = 'https://twbb-users.vercel.app/api/users/update/'
 
 const EditProfile = () => {
     const [fName, setFName] = useState('');

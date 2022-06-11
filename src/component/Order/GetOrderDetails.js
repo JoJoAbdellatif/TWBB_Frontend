@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Map from '../User/Map'
 const axios = require('axios')
-const CreateOrderURl = 'http://localhost:2000/api/orders/createOrder?cartID='
+const CreateOrderURl = 'https://twbb-orders.vercel.app/api/orders/createOrder?cartID='
 
 const GetOrderDetails = () => {
 

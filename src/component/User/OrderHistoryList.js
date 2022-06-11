@@ -1,6 +1,6 @@
 const axios = require('axios')
-const cancelOrderURL = 'http://localhost:2000/api/orders/cancelOrder/'
-const cancelShippingURL = 'http://localhost:7000/api/shipping/updateStatus/'
+const cancelOrderURL = 'https://twbb-orders.vercel.app/api/orders/cancelOrder/'
+const cancelShippingURL = 'https://twbb-shipment.vercel.app/api/shipping/updateStatus/'
 
 const OrderHistoryList = (props) => {
     const orders = props.orders
