@@ -9,6 +9,9 @@ import "mapbox-gl/dist/mapbox-gl.css"
 
 mapboxgl.accessToken = 'pk.eyJ1IjoieWFoaWFhYmJhcyIsImEiOiJjbDQ1eHg2eWcwMzdwM2tzMGxlcWVsczV0In0.PDZQgqqQCgIQWuEywmDCjw'
 
+// @ts-ignore
+    // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+    mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;// Load worker code separately with worker-loader
 
 const MapView = (props) => {
 
