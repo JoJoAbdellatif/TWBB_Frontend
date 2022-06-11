@@ -5,33 +5,31 @@ const axios = require('axios')
 const useFetch = (url) => {
     const [data, setData] = useState([])
     const [isPending, setIsPending] = useState(true)
-    const [error, setError] = useState(null)
 
     let isRendered = useRef(false);
 
     useEffect(() => {
         isRendered = true;
-        axios
-            .get(url)
+        axios.get(url)
             .then(res => {
                 if (isRendered) {
                     setData(Object.assign(res.data))
                 }
                 setIsPending(false)
                 return null;
-               
+
             })
             .catch(err => console.log(err));
         return () => {
             isRendered = false;
         };
     }, []);
-  
-          
-          return {data,isPending,error}
-    }
 
-    
+
+    return { data, isPending }
+}
+
+
 
 
 export default useFetch;

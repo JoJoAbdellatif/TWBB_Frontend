@@ -10,7 +10,6 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const user = { email,password};
-        //setIsPending(true);
     
     axios.post(LoginURL,{
         Email: user.email,
@@ -18,29 +17,36 @@ const Login = () => {
     })
     .then(function (response) {
        localStorage.setItem("User" , response.data._id)
+       console.log(localStorage.getItem("User"));
        localStorage.setItem("Cart" , response.data.Cart_ID._id)
-       console.log(response.data._id);
-       console.log(response.data.Cart_ID._id);
+       console.log(localStorage.getItem("Cart"));
       })
       .catch(function (error) {
         console.log(error);
       });
+
+
     }
     
     return (
         <div>
-            <h2>Login</h2>
             <form onSubmit={handleSubmit}>
-                <label>Email:</label>
-                <input type="text" required value={email} onChange={(e) => setEmail(e.target.value)} /><br /><br></br>
+            <h2 className="custom-h2">Login</h2>
+                <div className="custom-div">
 
-                <label>Password:</label>
-                <input type="text" required value={password} onChange={(e) => setPassword(e.target.value)} /><br /><br></br>
+                <input className ="custom-input "placeholder="Email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} /><br /><br></br>
 
-                {<button>Submit</button>}
+                <input className ="custom-input "placeholder="Password" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} /><br /><br></br>
+                </div>
+                <div className="custom-div2">
+              
+                {<button className="btn btn-lg btn-block">Submit</button>}
+               
+                </div>
             </form>
         </div>
     );
+
 }
 
 export default Login;

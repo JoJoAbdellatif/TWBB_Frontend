@@ -6,20 +6,16 @@ import Register from './component/User/Register';
 import ProductDetails from './component/Product/ProductDetails';
 import Login from './component/User/Login';
 import Cart from './component/User/Cart';
-const axios = require('axios');
-const UrlGuestCart = "http://localhost:8000/api/carts/createCart"
+import GetOrderDetails from './component/Order/GetOrderDetails';
+import Search from './component/User/Search';
+import GetOrderDetails2 from './component/Order/GetOrderDetails2';
+import Profile from './component/User/Profile';
+import OrderHistory from './component/User/OrderHistory';
+import EditProfile from './component/User/EditProfile';
 
 function App() {
-  // if(!localStorage.get('Cart')){
-  //   axios.get(UrlGuestCart)
-  //   .then(function (response) {
-  //     console.log(response.data);
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   })
-  //   localStorage.set()
-  // }
+  localStorage.setItem('Cart',null)
+  localStorage.setItem('User',null)
   return (
     <Router>
       <div className="App">
@@ -35,6 +31,18 @@ function App() {
             <Route exact path="/login" element={<Login />}>
             </Route>
             <Route exact path="/cart/:id" element={<Cart />}>
+            </Route>
+            <Route exact path="/orderInfo1" element={<GetOrderDetails />}>
+            </Route>
+            <Route exact path="/orderInfo2" element={<GetOrderDetails2 />}>
+            </Route>
+            <Route exact path="/profile" element={<Profile/>}>
+            </Route>
+            <Route exact path="/search" element={<Search/>}>
+            </Route>
+            <Route exact path="/orderHistory" element={<OrderHistory/>}>
+            </Route>
+            <Route exact path="/editProfile" element={<EditProfile/>}>
             </Route>
   
           </Routes>

@@ -4,9 +4,14 @@ import axios from 'axios';
 const addProductURL = 'http://localhost:8000/api/carts/addProduct?cartID='
 const UrlGuestCart = "http://localhost:8000/api/carts/createCart"
 
-const ProductList = (props) => {
-    const products = props.products
 
+
+
+const SearchList = (props) => {
+    
+    
+    const products = props.products
+    console.log(products);
     function addProduct(id,e) {
         if(localStorage.getItem('Cart') === "null"){
             axios.post(UrlGuestCart)
@@ -40,53 +45,50 @@ const ProductList = (props) => {
     }
     function outOfStock(product){
         let currentProduct
-        if(product.productReference[0].productQuantity === '0'){
-
-            currentProduct=<div className="product-preview-outofstock" key={product.id}>
+        if(product.ProductQuantity === '0'){
+            currentProduct=<div className="product-preview-outofstock" key={product.ProductID}>
+            <Link to ={`/product/${product.ProductID}`}>
+                <img src={product.ProductImage} className='prodImage' />
+                <h1 className='price'>{product.Productprice}.00 EGP</h1>
+                <h2 className='prodName'>{product.productName}</h2>
+                <h3 className='prodWeight'>Weight:{product.productWeight}</h3>
                 
-            <Link to ={`/product/${product._id}`}>
-
-                <img src={product.productImage} className='prodImage' /><br></br><br></br>
-                <h1 className='priceNA'>{parseInt(product.productReference[0].productPrice)/100}.00 EGP</h1>
-                <h2 className='prodNameNA'>{product.productName}</h2><br></br><br></br>
-                <div className='position-relative'>
-                        <h3 className='prodWeightNA position-absolute bottom-0 start-0'>OutOfStock</h3>
-                        </div>                
             </Link>
+            <h3>out of stock</h3>
         </div>
            
         }else{
-
             currentProduct=
-            <div className="product-preview" key={product.id}>
-                    <Link to ={`/product/${product._id}`}>
-                        <img src={product.productImage} className='prodImage' />
+            <div className="product-preview" key={product.ProductID}>
+                   <div className="product-preview" key={product.ProductID}>
+                    <Link to ={`/product/${product.ProductID}`}> 
+                        <img src={product.ProductImage} className='prodImage' />
                     </Link>
 
-                    <div className='buttonBox' href="/addproduct"><button onClick={(e) => addProduct(product._id, e)} className='buttonAdd'><img className='buttonImage' src={addToCart}></img></button></div>
+                    <div className='buttonBox' href="/addproduct"><button onClick={(e) => addProduct(product.ProductID, e)} className='buttonAdd'><img className='buttonImage' src={addToCart}></img></button></div>
 
-                    <Link to ={`/product/${product._id}`}>
+                    <Link to ={`/product/${product.ProductID}`}> 
                       
-                        <h1 className='price'>{parseInt(product.productReference[0].productPrice)/100}.00 EGP</h1>
+                        <h1 className='price'>{product.Productprice/100}.00 EGP</h1>
                         <h2 className='prodName'>{product.productName}</h2><br></br><br></br>
                     <div className='position-relative'>
-                        <h3 className='prodWeight position-absolute bottom-0 start-0'>Weight:{product.productWeight}</h3>
+                        <h3 className='prodWeight position-absolute bottom-0 start-0'>Weight:{product.ProductWeight}</h3>
                         </div>
                     </Link>
                     
                 </div>
+                </div>
         }
-        return currentProduct
+        return currentProduct  
     }
-
     return (
         <div className="product-list">
             {products.map((product) => (
+
                 outOfStock(product)
-                
             ))}
         </div>
     );
 }
 
-export default ProductList;
+export default SearchList;
