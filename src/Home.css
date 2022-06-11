@@ -12,9 +12,24 @@
     font-weight: 700;
     font-size: 16pt;
 }
+.footer1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: fit-content;
+    color: #115341;
+
+  }
 .bi{
     color:#115341 !important;
     size: 60px !important;
+
+}
+.bi2{
+    color:#115341 !important;
+    size: 60px !important;
+    padding: 10px !important;
+
 }
 .spinner-border{
     position: absolute !important;

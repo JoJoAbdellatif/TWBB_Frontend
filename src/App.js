@@ -12,6 +12,7 @@ import GetOrderDetails2 from './component/Order/GetOrderDetails2';
 import Profile from './component/User/Profile';
 import OrderHistory from './component/User/OrderHistory';
 import EditProfile from './component/User/EditProfile';
+import Footer from './Footer'
 
 function App() {
   localStorage.setItem('Cart',null)
@@ -20,6 +21,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Home />}>
@@ -44,11 +46,16 @@ function App() {
             </Route>
             <Route exact path="/editProfile" element={<EditProfile/>}>
             </Route>
-  
+
           </Routes>
+
         </div>
+        <Footer />
+
       </div>
+
     </Router>
+
   );
 }
 
