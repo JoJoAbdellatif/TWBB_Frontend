@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import MapView from './MapView'
 import {Link} from "react-router-dom";
 const axios = require('axios')
-const deleteURL = 'https://twbb-users.vercel.app/users/'
+const deleteURL = 'https://twbb-users.vercel.app/api/users/'
 
 const Profile = () => {
     const [fName, setFName] = useState('');
