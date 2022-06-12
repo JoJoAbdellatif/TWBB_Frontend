@@ -40,7 +40,7 @@ const ProductList = (props) => {
     }
     function outOfStock(product){
         let currentProduct
-        if(product.productReference[0].productQuantity === '0'){
+        if(parseInt(product.productReference[0].productQuantity) <= 0){
 
             currentProduct=<div className="product-preview-outofstock" key={product.id}>
                 

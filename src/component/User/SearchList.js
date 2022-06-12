@@ -45,7 +45,7 @@ const SearchList = (props) => {
     }
     function outOfStock(product){
         let currentProduct
-        if(product.ProductQuantity === '0'){
+        if(parseInt(product.ProductQuantity) <= 0){
             currentProduct=<div className="product-preview-outofstock" key={product.ProductID}>
             <Link to ={`/product/${product.ProductID}`}>
                 <img src={product.ProductImage} className='prodImage' />
